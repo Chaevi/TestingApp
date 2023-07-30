@@ -1,0 +1,72 @@
+﻿<Window x:Class="Client.TestingWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="Window1" Height="400" Width="600" Loaded="Window_Loaded">
+    <Window.Resources>
+        <Style TargetType="Label">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBlock">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="Button">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="TextBox">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="RadioButton">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+        <Style TargetType="CheckBox">
+            <Setter Property="FontSize" Value="16"/>
+        </Style>
+    </Window.Resources>
+    
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="110*"/>
+            <ColumnDefinition Width="422*"/>
+            <ColumnDefinition Width="133*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="60*"/>
+            <RowDefinition Height="80*"/>
+            <RowDefinition Height="35*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="QuitButton" Grid.Column="3" Content="Выход" Margin="5,5,5,5" Click="QuitButton_Click"/>
+        <TextBlock x:Name="NameOfTestLabel" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Название теста" VerticalAlignment="Center" Grid.Column="1"/>
+        <TextBlock x:Name="CounterLabel" Grid.Row="1" TextWrapping="Wrap" Text="Вопрос ?/?" Grid.Column="0" Margin="5,5,5,0" VerticalAlignment="Top"/>
+        <TextBlock x:Name="QuestionLabel" Grid.Column="1" Margin="5,5,5,5" Grid.Row="1" TextWrapping="Wrap" Text="Текст вопроса"/>
+
+        <StackPanel x:Name="RadioButtonGroup" Grid.Row="2" Grid.Column="1" Visibility="Visible">
+            <RadioButton x:Name="Rb1" Content="1" Margin="5,5,5,0"/>
+            <RadioButton x:Name="Rb2" Content="2" Margin="5,5,5,0"/>
+            <RadioButton x:Name="Rb3" Content="3" Margin="5,5,5,0"/>
+            <RadioButton x:Name="Rb4" Content="4" Margin="5,5,5,0"/>
+        </StackPanel>
+
+        <StackPanel x:Name="CheckBoxGroup" Grid.Row="2" Grid.Column="1" Visibility="Collapsed">
+            <CheckBox x:Name="Cb1" Content="1" Margin="0,0,5,0" HorizontalAlignment="Left"/>
+            <CheckBox x:Name="Cb2" Content="1" Margin="0,0,5,0" HorizontalAlignment="Left"/>
+            <CheckBox x:Name="Cb3" Content="1" Margin="0,0,5,0" HorizontalAlignment="Left"/>
+            <CheckBox x:Name="Cb4" Content="1" Margin="0,0,5,0" HorizontalAlignment="Left"/>
+        </StackPanel>
+
+        <StackPanel Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+            <Button x:Name="Previous" Content="Предыдущий" Margin="5,5,0,0" Click="Previous_Click" VerticalAlignment="Top"/>
+            <Button x:Name="Next" Content="Следующий" Margin="5,5,0,0" VerticalAlignment="Top" Click="Next_Click"/>
+        </StackPanel>
+        <Button x:Name="FinishButton" Grid.Column="2" Content="Завершить" Margin="5,5,5,0" Grid.Row="3" VerticalAlignment="Top" Click="FinishButton_Click"/>
+
+
+    </Grid>
+</Window>
