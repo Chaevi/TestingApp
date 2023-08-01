@@ -28,3 +28,8 @@
 > SQLite
 -	Различные виды тестов (множественный выбор/последовательность/выбор картинки и др.). :black_square_button:
 > Реализованно только 2 вида вопросов (единичный/множественный выбор)
+
+[Демонстрационное видео](https://www.youtube.com/embed/iAqAS8wvNwA)
+
+[<img src="https://img.youtube.com/vi/iAqAS8wvNwA/hqdefault.jpg" width="600" height="400"
+/>](https://www.youtube.com/embed/iAqAS8wvNwA)
